@@ -23,9 +23,10 @@
         		<StackPanel Margin="0,10,0,0">
         			<local:TimeBar Margin="20,0"/>
                     <local:TimeTold HorizontalAlignment="Center" FontSize="30" Margin="0,0,0,10" FontWeight="Thin" />
-        		    <StackPanel x:Name="ActivityList">
-                        <local:TaskBar Title="Programming" Progress="50" />
-                        <local:TaskBar Title="Test bar" Progress="20" />
+        		    <StackPanel x:Name="ActivityList" Margin="20,10">
+                        <local:TaskBar Title="Programming" Progress="0.5" Foreground="#007DF9"/>
+                        <local:TaskBar Title="Test task" Progress="0.2" Foreground="#BD0067" />
+                        <local:TaskBar Title="Porn" Progress="0.05" Foreground="#BACD00" />
                     </StackPanel>
                 </StackPanel>
         	</PivotItem>

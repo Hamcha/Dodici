@@ -1,0 +1,13 @@
+﻿<UserControl
+    x:Class="Dodici.TimeBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="400" Height="50" Loaded="Setup">
+    <Grid>
+    	<Path x:Name="TimelineBorder" Data="M0,15 L0,10 L400,10 L400,15 M200,10 L200,15 M100,10 L100,15 M50,10 L50,13 M150,10 L150,13 M300,10 L300,15 M250,10 L250,13 M350,10 L350,13" Margin="10,5,10,0" Stretch="Fill" Stroke="{ThemeResource ButtonBorderThemeBrush}" VerticalAlignment="Top" Height="10"/>
+    	<Path x:Name="TimelinePointer" Data="M100,25 L105,20 L110,25 L100,25 L105,20" HorizontalAlignment="Left" Height="15" Margin="3,16,0,0" Stretch="Fill" StrokeThickness="2" UseLayoutRounding="False" VerticalAlignment="Top" Width="15" Fill="{ThemeResource ButtonForegroundThemeBrush}"/>
+    </Grid>
+</UserControl>

@@ -1,21 +1,21 @@
-﻿using Dodici.Common;
+﻿using Dodici.Classes;
+using Dodici.Common;
 using System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
-
 namespace Dodici {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Main page
     /// </summary>
     public sealed partial class Overview : Page {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private TaskCalendar history;
+        private TaskDay today;
 
         public Overview() {
             this.InitializeComponent();
-
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
@@ -37,7 +37,7 @@ namespace Dodici {
         }
 
         /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
+        /// Populates the page with content passed during navigation. Any saved state is also
         /// provided when recreating a page from a prior session.
         /// </summary>
         /// <param name="sender">
@@ -52,7 +52,7 @@ namespace Dodici {
 
         /// <summary>
         /// Preserves state associated with this page in case the application is suspended or the
-        /// page is discarded from the navigation cache.  Values must conform to the serialization
+        /// page is discarded from the navigation cache. Values must conform to the serialization
         /// requirements of <see cref="SuspensionManager.SessionState"/>.
         /// </summary>
         /// <param name="sender">The source of the event; typically <see cref="NavigationHelper"/></param>

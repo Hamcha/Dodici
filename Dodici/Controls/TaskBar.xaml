@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignWidth="400" Height="40" Margin="3">
+    d:DesignWidth="400" Height="40" Margin="3,7">
     <Grid>
-    	<ProgressBar VerticalAlignment="Stretch" Maximum="1" SmallChange="0.001" LargeChange="0.01" Value="{Binding Progress, ElementName=userControl}" Foreground="{Binding Foreground, ElementName=userControl}" Background="{x:Null}" />
-    	<TextBlock Foreground="White" TextWrapping="Wrap" Text="{Binding Title, ElementName=userControl}" FontSize="25" Margin="5,3" VerticalAlignment="Bottom" FontWeight="Thin" />
+    	<ProgressBar VerticalAlignment="Bottom" Maximum="1" SmallChange="0.001" LargeChange="0.01" Value="{Binding Progress, ElementName=userControl}" Foreground="{Binding Foreground, ElementName=userControl}" Background="{x:Null}" Height="4" />
+    	<TextBlock Foreground="{ThemeResource ButtonForegroundThemeBrush}" TextWrapping="Wrap" Text="{Binding Title, ElementName=userControl}" FontSize="26.667" Margin="0" FontWeight="Thin" />
     </Grid>
 </UserControl>
